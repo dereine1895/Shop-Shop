@@ -1,10 +1,11 @@
-public class ShopServer {
+public class ShopServer extends Server {
 
     public ShopServer(int pPortnummer){
 
     }
 
     public void processNewConnection(String pClientIP, int pClientPort){
+        this.send(pClientIP, pClientPort, "Willkommen! Wählen Sie eine Größe und eine Farbe für Ihr T-Shirt.");
 
     }
 
