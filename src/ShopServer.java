@@ -13,9 +13,9 @@ public class ShopServer extends Server {
         String[] nachrichtTeil = pMessage.split(":");
         if(nachrichtTeil[0].equals("TSHIRT"))
         {
-            this.send(pClientIP, pClientPort, "Die Groesse ist" +
-                    nachrichtTeil[1] + ",die Farbe ist" +
-                    nachrichtTeil[2] + "und es kostet 19,99 Euro! Bitte bestätigen Sie die Bestellung.");
+            this.send(pClientIP, pClientPort, "Die Groesse ist " +
+                    nachrichtTeil[1] + ",die Farbe ist " +
+                    nachrichtTeil[2] + " und es kostet 19,99 Euro! Bitte bestätigen Sie die Bestellung.");
         }
         else if (nachrichtTeil[0].equals("BESTAETIGUNG"))
         {
@@ -27,6 +27,10 @@ public class ShopServer extends Server {
             else if (nachrichtTeil[1].equals("nein"))
             {
                 closeConnection(pClientIP, pClientPort);
+            }
+            else if(nachrichtTeil[1].equals("weiter"))
+            {
+
             }
             else
             {
