@@ -1,7 +1,7 @@
 public class ShopServer extends Server {
 
-    public ShopServer(int pPortnummer){
-
+    public ShopServer(int pPort){
+     super(pPort);
     }
 
     public void processNewConnection(String pClientIP, int pClientPort){
@@ -35,7 +35,7 @@ public class ShopServer extends Server {
         }
     }
 
-    public void processClosedConnection(String pClientIP, int pClientport){
+    public void processClosingConnection(String pClientIP, int pClientport){
 
     }
 
